@@ -1,0 +1,15 @@
+/* http://paulirish.com/2012/box-sizing-border-box-ftw/ */
+/* apply a natural box layout model to all elements */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* Common */
+article { width: 980px; margin: 0 auto; padding: 10px 20px; }
+
+/* Index */
+#cover_art { width: 400px; margin: 40px auto; }
+#cover_art a { border-width: 0; }
+
+/* iParty */
+#hello { margin: 40px auto 100px auto; display: block; }
+#map_canvas { width: 400px; height: 300px; }
+
