@@ -13,3 +13,5 @@ article { width: 980px; margin: 0 auto; padding: 10px 20px; }
 #hello { margin: 40px auto 100px auto; display: block; }
 #map_canvas { width: 400px; height: 300px; }
 
+/* RSVP */
+#rsvp iframe { width: 200px; margin-left: 370px; border: 0px solid red; }
