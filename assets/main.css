@@ -8,7 +8,31 @@ a { color: #08C; text-decoration: none; }
 a:hover { text-decoration: underline; }
 h2 { font-size: 1.7142em; font-weight: normal; line-height: 1.1666em; }
 h3 { font-size: 1.4142em; font-weight: normal; line-height: 1; }
-p, dl, ul, ol { font-size: 1.167em; line-height: 1.4285em; color: #333; word-spacing: -1px; }
+article p, article dl, article ul, article ol { font-size: 1.167em; line-height: 1.4285em; color: #333; word-spacing: -1px; }
+
+/* PIPED LINKS */
+.piped { display: block; zoom: 1; }
+.piped:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.piped li { float: left; display: inline; }
+.piped a { border-left: 1px solid #797c80; padding: 0 0 0 0.75em; margin-left: 0.75em; }
+.piped a.first { border-left: 0 !important; padding-left: 0; margin-left: 0 !important; }
+
+/*--- Global Footer ---*/
+#globalfooter { width: 980px; color: #888; font-size: 10px; margin: 18px auto 0; padding-bottom: 36px; text-align: left !important; }
+#globalfooter a { color: #08c; }
+#globalfooter p { margin-bottom: 1em; }
+#globalfooter p.gf-buy { float: left; width: 52%; margin: 18px 0 9px 3px; }
+#globalfooter ul.piped a { padding: 0 0 0 1.5em; margin-left: 1.5em; border-left: 1px solid #d0d0d0; }
+#globalfooter .gf-links { float: right; margin: 18px 3px 9px 0; }
+#globalfooter .gf-sosumi { clear: both; width: 100%; border-top: 1px solid #ddd; padding-top: 9px; }
+#globalfooter .gf-sosumi a { padding: 0 10px; }
+#globalfooter .gf-sosumi p { float: left; margin-left: 3px; }
+#globalfooter form { margin: 18px 10px; }
+#globalfooter .search-wrapper { margin: 0 auto; }
+#globalfooter .search-wrapper input.prettysearch { margin-left: 10px; }
+#globalfooter ul.piped a.contact_us { padding-right: 1.5em; border-right: 1px solid #d0d0d0; }
+#globalfooter ul.piped a.choose { margin-left: 0; border: 0; }
+#globalfooter ul.piped a.choose img { vertical-align: middle; margin-top: -5px; *position: relative; }
 
 /* Common */
 article { width: 980px; margin: 0 auto; padding: 10px 20px; }
