@@ -57,9 +57,10 @@ article { width: 980px; margin: 0 auto; padding: 0; background: white; }
 #travel section.divider-down { background: url(section_divider_down.png) no-repeat; }
 #travel h3 { margin-left: 70px; }
 #travel .narrow-text { margin: 0 70px; clear: right; }
-#travel .by-plane { margin: 0 0 25px 0; padding: 0 0 10px 0; border-bottom: 1px solid #ddd; }
-#travel .by-car { width: 100%; float: left; padding: 0; margin: 0 0 25px 0; }
-#travel .by-train { width: 100%; float: right; margin: 0 0 15px 0; }
+#travel .by-plane { }
+#travel .by-car { }
+#travel .by-boat { }
+#travel .by-train { }
 #travel dd { margin-left: 0; }
 #travel img.left { float: left; margin: 0 15px 15px 0; }
 #travel .map { width: 980px; height: 300px; margin: 0 20px 45px -20px; padding: 0; }

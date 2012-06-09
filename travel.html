@@ -31,7 +31,7 @@
             Stockholm is served by several airports, but the biggest and best is <a href="http://www.swedavia.com/arlanda/">Arlanda</a> to the north. Several large airlines, including <a href="http://www.flysas.com/en/">SAS</a> and <a href="">Finnair</a> who have good routes to Asia, traffic Arlanda from many locations in the world. There are direct flights from some destinations, but most intercontinental flights will connect through European hubs like London and Copenhagen.
           </p>
           <p>
-            To go from Arlanda to central Stockholm you can take the <a href="http://www.arlandaexpress.com/">Arlanda Express</a> train, or the <a href="http://www.flygbussarna.se/?lang=EN">Flygbussarna</a> airport coaches.
+            To go from Arlanda to central Stockholm you can take the <a href="http://www.arlandaexpress.com/">Arlanda Express</a> train or the <a href="http://www.flygbussarna.se/?lang=EN">Flygbussarna</a> airport coaches.
           </p>
           <p>
             Some airlines also have flights from European locations to the smaller airports <a href="http://www.swedavia.com/bromma/">Bromma</a> and <a href="http://www.skavsta.se/en/">Skavsta</a>. The latter is trafficked by the budget airline <a href="http://www.ryanair.com/en">Ryan Air</a>.
@@ -45,6 +45,13 @@
           <h4>By Car</h4>
           <p>
             Car is a great way to see Sweden, its endless forests close to Stockholm and rolling plains in the south. To get from mainland Europe to Sweden you will have to pass the <a href="http://uk.oresundsbron.com/page/976">Öresundsbron</a> bridge that connects Copenhagen in Denmark and Malmö in Sweden. Please ask us if you want tips on where to stay along the road in Sweden. The trip from Malmö to Stockholm takes around 7 hours of continuous driving.
+          </p>
+        </div>
+
+        <div class="by-boat clearfix">
+          <h4>By Boat</h4>
+          <p>
+            Stockholm is known for its beautiful location in the archipelago. If you are flying to Helsinki you can experience this firsthand by taking a cruise ship to Stockholm. Several large ferry companies run regular services between the two capitals and the trip usually takes around 18 hours. This means that you will leave Helsinki in the afternoon and arrive in Stockholm the following morning. <a href="http://www.vikingline.fi/index.asp?lang=en">Viking Line</a> and <a href="http://www.tallinksilja.com/en/">Tallink Silja</a> are the two biggest companies. This is a common way for Swedish people to buy tax-free alcohol or take a short vacation.
           </p>
         </div>
 
@@ -195,6 +202,8 @@
       var bromma = {lat: 59.355555, lng: 17.945809};
       var skavsta = {lat: 58.789397, lng: 16.916462};
       var centralen = {lat: 59.330958, lng: 18.056851};
+      var viking = {lat: 59.315973, lng: 18.097115};
+      var silja = {lat: 59.350376, lng: 18.106944};
       
       travelMap = new GMaps({div: '#travel_map', lat: travel_center.lat, lng: travel_center.lng, zoom: 7});
       travelMap.addMarker({
@@ -205,6 +214,10 @@
         lat: skavsta.lat, lng: skavsta.lng, title: 'Skavsta', icon: 'assets/marker-airport.png', infoWindow: {content: 'Skavsta airport'}});
       travelMap.addMarker({
         lat: centralen.lat, lng: centralen.lng, title: 'Central Station', icon: 'assets/marker-train.png', infoWindow: {content: 'Stockholm Central Station'}});
+      travelMap.addMarker({
+        lat: viking.lat, lng: viking.lng, title: 'Viking Line Harbour', icon: 'assets/marker-harbor.png', infoWindow: {content: 'Viking Line Harbour'}});
+      travelMap.addMarker({
+        lat: silja.lat, lng: silja.lng, title: 'Tallink Silja Harbour', icon: 'assets/marker-harbor.png', infoWindow: {content: 'Tallink Silja Harbour'}});
 
       // Hotels
       var hotel_center = {lat: 59.330382, lng: 18.105393};
