@@ -8,7 +8,7 @@ a { color: #08C; text-decoration: none; }
 a:hover { text-decoration: underline; }
 h2 { font-size: 1.7142em; font-weight: normal; line-height: 1.1666em; }
 h3 { font-size: 1.4142em; font-weight: normal; line-height: 1; }
-article p, article dl, article ul, article ol { font-size: 1.167em; line-height: 1.4285em; color: #333; word-spacing: -1px; }
+article { font-size: 1.167em; line-height: 1.4285em; color: #333; word-spacing: -1px; }
 
 /* PIPED LINKS */
 .piped { display: block; zoom: 1; }
@@ -47,3 +47,11 @@ article { width: 980px; margin: 0 auto; padding: 10px 20px; }
 
 /* RSVP */
 #rsvp iframe { width: 200px; margin-left: 370px; border: 0px solid red; }
+
+/* Travel */
+dd { margin-left: 0; }
+.left { float: left; margin: 0 15px 15px 0; }
+#travel_map { width: 400px; height: 300px; float: right; margin: 0 0 15px 15px; }
+#hotel_map { width: 400px; height: 300px; float: right; margin: 0 0 15px 15px; }
+
+
