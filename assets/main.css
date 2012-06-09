@@ -2,11 +2,14 @@
 /* apply a natural box layout model to all elements */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+/* 960 clearfix */
+.clearfix:after{clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0}* html .clearfix,*:first-child+html .clearfix{zoom:1}
+
 /* Apple */
 body { font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif; background-color: transparent; color: #333; -webkit-font-smoothing: antialiased; }
 a { color: #08C; text-decoration: none; }
 a:hover { text-decoration: underline; }
-h2 { font-size: 32px; font-weight: normal; line-height: 32px; margin: 1px auto 15px auto; width: 980px; padding: 0; color: black; }
+h2 { font-size: 32px; font-weight: normal; line-height: 32px; margin: 1px 0 20px 7px; padding: 0; color: black; }
 h3 { font-size: 1.7142em; font-weight: normal; line-height: 1.1666em; margin: 5px 0 1em 0; }
 h4 { font-size: 1.4142em; font-weight: normal; line-height: 1; margin: 3px 0 0.5em 0; }
 article { font-size: 1.167em; line-height: 1.4285em; color: #333; word-spacing: -1px; }
@@ -36,7 +39,8 @@ article { font-size: 1.167em; line-height: 1.4285em; color: #333; word-spacing: 
 #globalfooter ul.piped a.choose img { vertical-align: middle; margin-top: -5px; *position: relative; }
 
 /* Common */
-article { width: 980px; margin: 0 auto; padding: 0; background: white; }
+#content { margin: 0 auto; width: 980px; }
+article { margin: 0; padding: 0; background: white; }
 
 /* Index */
 #cover_art { width: 400px; margin: 40px auto; }
@@ -57,12 +61,17 @@ article { width: 980px; margin: 0 auto; padding: 0; background: white; }
 #travel section.divider-down { background: url(section_divider_down.png) no-repeat; }
 #travel h3 { margin-left: 70px; }
 #travel .narrow-text { margin: 0 70px; clear: right; }
-#travel .by-plane { }
+#travel .transport-col { float: left; width: 470px; margin: 0; padding: 0; }
+#travel .by { width: 400px; margin: 0 35px 15px 35px; float: left; }
+#travel .by-plane {  height: 400px; clear: none; }
 #travel .by-car { }
-#travel .by-boat { }
+#travel .by-car img { border-radius: 5px 0 0 5px; border: 0px solid #ddd; margin: 20px 0 15px -35px; opacity: 0.9; }
+#travel .by-boat { clear: none; }
 #travel .by-train { }
 #travel dd { margin-left: 0; }
 #travel img.left { float: left; margin: 0 15px 15px 0; }
 #travel .map { width: 980px; height: 300px; margin: 0 20px 45px -20px; padding: 0; }
+#travel .transport-icon { height: 13px; margin-left: 10px; width: 30px; }
+#travel .transport-icon-large { height: 17px; margin-left: 10px; width: 30px; }
 
 
