@@ -6,8 +6,9 @@
 body { font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif; background-color: transparent; color: #333; -webkit-font-smoothing: antialiased; }
 a { color: #08C; text-decoration: none; }
 a:hover { text-decoration: underline; }
-h2 { font-size: 1.7142em; font-weight: normal; line-height: 1.1666em; }
-h3 { font-size: 1.4142em; font-weight: normal; line-height: 1; }
+h2 { font-size: 32px; font-weight: normal; line-height: 32px; margin: 1px auto 15px auto; width: 980px; padding: 0; color: black; }
+h3 { font-size: 1.7142em; font-weight: normal; line-height: 1.1666em; margin: 5px 0 1em 0; }
+h4 { font-size: 1.4142em; font-weight: normal; line-height: 1; margin: 3px 0 0.5em 0; }
 article { font-size: 1.167em; line-height: 1.4285em; color: #333; word-spacing: -1px; }
 
 /* PIPED LINKS */
@@ -35,7 +36,7 @@ article { font-size: 1.167em; line-height: 1.4285em; color: #333; word-spacing: 
 #globalfooter ul.piped a.choose img { vertical-align: middle; margin-top: -5px; *position: relative; }
 
 /* Common */
-article { width: 980px; margin: 0 auto; padding: 10px 20px; }
+article { width: 980px; margin: 0 auto; padding: 0; background: white; }
 
 /* Index */
 #cover_art { width: 400px; margin: 40px auto; }
@@ -49,9 +50,18 @@ article { width: 980px; margin: 0 auto; padding: 10px 20px; }
 #rsvp iframe { width: 200px; margin-left: 370px; border: 0px solid red; }
 
 /* Travel */
-dd { margin-left: 0; }
-.left { float: left; margin: 0 15px 15px 0; }
-#travel_map { width: 400px; height: 300px; float: right; margin: 0 0 15px 15px; }
-#hotel_map { width: 400px; height: 300px; float: right; margin: 0 0 15px 15px; }
+#travel { background: #F2F2F2 url(body_bg20110224.png) repeat-x 0px 0px; }
+#travel article { border-radius: 4px; -webkit-box-shadow: rgba(0, 0, 0, 0.296875) 0px 1px 3px; background: white; }
+#travel section { margin: 0; padding: 10px 20px; clear: both; }
+#travel section.staying { padding-top: 2em; }
+#travel section.divider-down { background: url(section_divider_down.png) no-repeat; }
+#travel h3 { margin-left: 70px; }
+#travel .narrow-text { margin: 0 70px; clear: right; }
+#travel .by-plane { margin: 0 0 25px 0; padding: 0 0 10px 0; border-bottom: 1px solid #ddd; }
+#travel .by-car { width: 100%; float: left; padding: 0; margin: 0 0 25px 0; }
+#travel .by-train { width: 100%; float: right; margin: 0 0 15px 0; }
+#travel dd { margin-left: 0; }
+#travel img.left { float: left; margin: 0 15px 15px 0; }
+#travel .map { width: 980px; height: 300px; margin: 0 20px 45px -20px; padding: 0; }
 
 
