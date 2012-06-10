@@ -91,14 +91,23 @@ article { margin: 0; padding: 0; background: white; }
 #travel section.divider-down { background: url(section_divider_down.png) no-repeat; }
 #travel h3 { margin-left: 70px; }
 #travel .narrow-text { margin: 0 70px; clear: right; }
-#travel .transport-col { float: left; width: 470px; margin: 0; padding: 0; }
-#travel .by { width: 400px; margin: 0 35px 15px 35px; float: left; }
-#travel .by-plane {  height: 400px; clear: none; }
+#travel .transport-col { float: left; width: 363px; margin: 0 40px 0 35px; padding: 0; text-align: justify; }
+#travel .by { width: 363px; margin: 0 35px 15px 35px; float: left; }
+#travel .by-plane {  height: 375px; clear: none; }
 #travel .by-car { }
-#travel .by-car img { border-radius: 5px 0 0 5px; border: 0px solid #ddd; margin: 20px 0 15px -35px; opacity: 0.9; }
+#travel .by-car img { margin: 15px 0 10px -20px; opacity: 0.9; border-radius: 5px; width: 450px; }
 #travel .by-boat { clear: none; }
 #travel .by-train { }
-#travel dd { margin-left: 0; }
+#travel dt { clear: both; margin-top: 2em; }
+#travel dt.hotelj { margin-top: 1em; }
+#travel dd { margin-left: 0; clear: both; }
+#travel dt.hotelj { margin-bottom: 15px; }
+#travel .hotelj p { position: absolute; margin-left: 315px; width: 304px; padding-top: 0; margin-top: 0; }
+#travel .hotelj .img1 { margin-bottom: 2em; }
+#travel .hotelj .img2 { margin-top: 120px; }
+#travel .hotelj .img3 { margin: 78px 0 0 0; }
+#travel .story img.img1 { float: right; padding-left: 15px; }
+#travel .story img.img2 { width: 354px; padding-top: 15px; }
 #travel img.left { float: left; margin: 0 15px 15px 0; }
 #travel .map { width: 980px; height: 300px; margin: 0 20px 45px -20px; padding: 0; }
 #travel .transport-icon { height: 13px; margin-left: 10px; width: 30px; }

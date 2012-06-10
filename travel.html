@@ -96,21 +96,22 @@
       
         <h4>Hotels</h4>
         <dl>
-          <dt><a href="http://eng.hotelj.com/">Hotel J</a> ☆☆☆☆</dt>
-          <dd>
-            <img src="assets/Hotel_J_Exterior.jpg" class="left" height="200px" />
-            <img src="assets/Hotel_J_Room.jpg" class="left" />
+          <dt class="hotelj"><a href="http://eng.hotelj.com/">Hotel J</a> ☆☆☆☆</dt>
+          <dd class="hotelj">
+            <img src="assets/Hotel_J_Exterior.jpg" class="left img1" />
+            <img src="assets/Hotel_J_Room.jpg" class="left img2" />
+            <img src="assets/Hotel_J_tree.jpg" class="left img3" />
             <p>
               This is where iParty will take place. It’s located about 15 minutes by cab from Stockholm, has American inspired rooms and a beautiful view of the archipelago inlet to Stockholm.
             </p>
           </dd>
-<br/>
+
           <dt><a href="http://www.storyhotels.com/">Story Hotel</a> ☆☆☆☆</dt>
-          <dd>
-            <img src="assets/storyhotel_The_Backyard.jpg" class="left" height="250px" />
-            <img src="assets/storyhotel_LilyDamSuiteBed.jpg" class="left" height="250px" />
+          <dd class="story">
             <p>
+              <img src="assets/storyhotel_The_Backyard.jpg" class="img1" />
               Miwa and Kim are staying here between Thursday and Monday. A weird place with great art, located in central Stockholm close to hip Stureplan.
+              <img src="assets/storyhotel_LilyDamSuiteBed.jpg" class="img2" />
             </p>
           </dd>
 
@@ -142,7 +143,7 @@
             </p>
           </dd>
 
-          <dt><a href="http://www.freyshotels.com/freyshotel/default-en.html">Freys Hotel</a> ☆☆☆☆</dt>
+          <dt><a href="http://www.freyshotels.com/freyshotel/default-en.html">Freys Hotel</a> ☆☆☆</dt>
           <dd>
             <p>
               Three star boutique hotel located in the central part of Stockholm.
@@ -224,7 +225,7 @@
         lat: silja.lat, lng: silja.lng, title: 'Tallink Silja Harbour', icon: 'assets/marker-harbor.png', infoWindow: {content: 'Tallink Silja Harbour'}});
 
       // Hotels
-      var hotel_center = {lat: 59.330382, lng: 18.105393};
+      var hotel_center = {lat: 59.328382, lng: 18.105393};
       var hotelj = {lat: 59.318316, lng: 18.165123};
       var story = {lat: 59.334734, lng: 18.075113};
       var nobis = {lat: 59.333166, lng: 18.073808};
@@ -235,16 +236,12 @@
       var radmannen = {lat: 59.339273, lng: 18.0548};
       var bakfickan = {lat: 59.339127, lng: 18.054215};
       var rival = {lat: 59.318165, lng: 18.063631};
-      var mornington = {lat: 59.337898, lng: 18.079673};
-      var hellsten = {lat: 59.34142, lng: 18.059639};
-      var courtyard = {lat: 59.331027, lng: 18.021697};
-      var kungcarl = {lat: 59.336361, lng: 18.071712};
       
       hotelMap = new GMaps({div: '#hotel_map', lat: hotel_center.lat, lng: hotel_center.lng, zoom: 12});
       hotelMap.addMarker({
         lat: hotelj.lat, lng: hotelj.lng, title: 'Hotel J', icon: 'assets/marker-villa.png', infoWindow: {content: 'Hotel J'}});
       hotelMap.addMarker({
-        lat: story.lat, lng: story.lng, title: 'Story Hotel', icon: 'assets/marker-hotel.png', infoWindow: {content: 'Story Hotel'}});
+        lat: story.lat, lng: story.lng, title: 'Story Hotel', icon: 'assets/marker-lodging.png', infoWindow: {content: 'Story Hotel'}});
       hotelMap.addMarker({
         lat: nobis.lat, lng: nobis.lng, title: 'Nobis Hotel', icon: 'assets/marker-lodging.png', infoWindow: {content: 'Nobis Hotel'}});
       hotelMap.addMarker({
@@ -261,14 +258,6 @@
         lat: bakfickan.lat, lng: bakfickan.lng, title: 'Hotel Bakfickan', icon: 'assets/marker-lodging.png', infoWindow: {content: 'Hotel Bakfickan'}});
       hotelMap.addMarker({
         lat: rival.lat, lng: rival.lng, title: 'Hotel Rival', icon: 'assets/marker-lodging.png', infoWindow: {content: 'Hotel Rival'}});
-      hotelMap.addMarker({
-        lat: mornington.lat, lng: mornington.lng, title: 'Mornington Hotel', icon: 'assets/marker-lodging.png', infoWindow: {content: 'Mornington Hotel'}});
-      hotelMap.addMarker({
-        lat: hellsten.lat, lng: hellsten.lng, title: 'Hotel Hellsten', icon: 'assets/marker-lodging.png', infoWindow: {content: 'Hotel Hellsten'}});
-      hotelMap.addMarker({
-        lat: courtyard.lat, lng: courtyard.lng, title: 'Courtyard Stockholm', icon: 'assets/marker-lodging.png', infoWindow: {content: 'Courtyard Stockholm'}});
-      hotelMap.addMarker({
-        lat: kungcarl.lat, lng: kungcarl.lng, title: 'Best Western Premier Hotell Kung Carl', icon: 'assets/marker-lodging.png', infoWindow: {content: 'Best Western Premier Hotell Kung Carl'}});
     });
   </script>
 </body>
