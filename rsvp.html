@@ -16,6 +16,7 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
   </script>
+  <script src="http://www.parsecdn.com/js/parse-1.0.2.min.js"></script>
 </head>
 <body id="rsvp">
   <nav id="globalheader" class="gn-last">
@@ -28,8 +29,48 @@
     </ul>
   </nav>
 
+  <div id="content">
+  <h2>RSVP</h2>
+
   <article>
-    <iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dHpFVzd1QnhRd3VNQWtlbE91WnNhaHc6MQ" width="760" height="625" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    <form id="rsvp_form">
+      <p id="name_group">
+        <label for="name" class="required"><strong>Your name</strong></label><br />
+        <input type="text" name="name" id="name" />
+      </p>
+      <p id="rsvp_group">
+        <label class="required"><strong>Will you attend?</strong></label><br />
+        <input type="radio" name="rsvp_status" id="rsvp_yes" value="yes" /> <label for="rsvp_yes">Yes</label><br />
+        <input type="radio" name="rsvp_status" id="rsvp_no" value="no" /> <label for="rsvp_no">No</label>
+      </p>
+      <p id="email_group">
+        <label for="email" class="required"><strong>Email</strong></label><br />
+        <input type="text" name="email" id="email" />
+      </p>
+      <p id="address_group">
+        <label for="address" class="required"><strong>Address</strong></label><br />
+        <textarea name="address" id="address"></textarea>
+      </p>
+      <div>
+        <label><strong>For out of town guests</strong></label><br />
+        <div class="arrive-leave arrive">
+          <label for="arriving">Date arriving</label><br />
+          <input type="text" name="arriving" id="arriving" /><br />
+        </div>
+        <div class="arrive-leave leave">
+          <label for="leaving">Date leaving</label><br />
+          <input type="text" name="leaving" id="leaving" />
+        </div>
+      </div>
+      <p>
+        <label for="comments"><strong>Comments</strong></label><br />
+        <input type="text" name="comments" id="comments" />
+      </p>
+      <p>
+        <input type="submit" value="Send" />
+        <span id="status">Sending ...</span>
+      </p>
+    </form>
   </article>
   
   <footer id="globalfooter">
@@ -44,6 +85,62 @@
   <script>
     $(function(){
       AC.GlobalNav.Instance = new AC.GlobalNav();
+
+      Parse.initialize("FMznVXCMwnXGYbxioZymeOs8tjv9h2FyBH12FDRS", "muFe8YEYPKFGqFXMCoG131hbIytyHqe511RhAsr8");
+      var RSVP = Parse.Object.extend("RSVP");
+      var rsvp = new RSVP();
+
+      $('#rsvp_form').submit(function(e){
+        e.preventDefault();
+        $('.please_fill_in').removeClass('please_fill_in');
+
+        var data = {
+          name: $('#name').val(),
+          attending: $('input:radio[name=rsvp_status]:checked').val(),
+          email: $('#email').val(),
+          address: $('#address').val(),
+          arriving: $('#arriving').val(),
+          leaving: $('#leaving').val(),
+          comments: $('#comments').val()
+        };
+        console.log(data);
+
+        var ok = true;
+        if ( '' == data.name ) {
+          $('#name_group').addClass('please_fill_in');
+          ok = false;
+        }
+        if ( undefined == data.attending ) {
+          $('#rsvp_group').addClass('please_fill_in');
+          ok = false;
+        }
+        if ( '' == data.email ) {
+          $('#email_group').addClass('please_fill_in');
+          ok = false;
+        }
+        if ( '' == data.address ) {
+          $('#address_group').addClass('please_fill_in');
+          ok = false;
+        }
+
+        if ( !ok ) {
+          return;
+        }
+
+        $('input').prop('disabled', true);
+        $('textarea').prop('disabled', true);
+        $('#status').show();
+
+        rsvp.save(data, {
+          success: function(object) {
+            if ( 'yes' == data.attending) {
+              $('#status').text('Sweet, we’re looking forward to seeing you!').addClass('yay');
+            } else {
+              $('#status').text('We thought we meant more to you :(').addClass('sad');
+            }
+          }
+        });
+      });
     });
   </script>
 </body>
