@@ -28,11 +28,16 @@
     </ul>
   </nav>
   
+  <div id="content">
   <article>
+    Check back later!
+    <!--
     <img id="hello" src="assets/hello3.gif" />
 
     <div id="map_canvas"></div>
+    -->
   </article>
+  </div>
 
   <footer id="globalfooter">
     <div class="gf-sosumi">
@@ -46,23 +51,6 @@
   <script>
     $(function(){
       AC.GlobalNav.Instance = new AC.GlobalNav();
-
-      var tornvillan = new google.maps.LatLng(59.318639,18.163952);
-      var stockholm = new google.maps.LatLng(59.323382,18.091393);
-
-      var mapOptions = {
-        center: stockholm,
-        zoom: 11,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      };
-
-      var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-
-      var tornvillanMarker = new google.maps.Marker({
-        position: tornvillan,
-        map: map,
-        icon: 'assets/marker-iparty.png'
-      });
     });
   </script>
 </body>
