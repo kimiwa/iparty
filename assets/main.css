@@ -42,7 +42,7 @@ article { font-size: 1.167em; line-height: 1.4285em; color: #333; word-spacing: 
 article { margin: 0; padding: 0; background: white; }
 
 /* Index */
-#cover_art { width: 400px; margin: 40px auto; }
+#cover_art { width: 400px; margin: 60px auto; }
 #cover_art a { border-width: 0; }
 
 /* iParty */
