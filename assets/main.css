@@ -75,7 +75,10 @@ article { margin: 0; padding: 0; background: white; }
 #rsvp .arrive { float: left; }
 #rsvp .leave { float: right; width: 150px; }
 #rsvp .arrive-leave input { width: 150px; }
-#rsvp input[type=submit] { font-size: 2em; width: 60px; -webkit-appearance: none; }
+#rsvp input[type=submit] { font-size: 2em; width: 60px; }
+@media only screen and (max-device-width: 480px) {
+  #rsvp input[type=submit] { font-size: 1em; width: 60px; -webkit-appearance: none; }
+}
 #rsvp .required:after { font-family: Geneva; font-size: 0.8em; color: #f00; content: ' (required)'; }
 #rsvp .please_fill_in { border-left: 5px solid #faa; padding-left: 5px; }
 #rsvp #status { display: none; color: #666; padding-left: 15px; }
