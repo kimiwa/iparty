@@ -222,21 +222,15 @@
       AC.GlobalNav.Instance = new AC.GlobalNav();
 
       // Travel
-      var travel_center = {lat: 59.323382, lng: 18.105393};
+      var travel_center = {lat: 59.500382, lng: 18.105393};
       var arlanda = {lat: 59.653905, lng: 17.939303};
-      var bromma = {lat: 59.355555, lng: 17.945809};
-      var skavsta = {lat: 58.789397, lng: 16.916462};
       var centralen = {lat: 59.330958, lng: 18.056851};
       var viking = {lat: 59.315973, lng: 18.097115};
       var silja = {lat: 59.350376, lng: 18.106944};
       
-      travelMap = new GMaps({div: '#travel_map', lat: travel_center.lat, lng: travel_center.lng, zoom: 7});
+      travelMap = new GMaps({div: '#travel_map', lat: travel_center.lat, lng: travel_center.lng, zoom: 9});
       travelMap.addMarker({
         lat: arlanda.lat, lng: arlanda.lng, title: 'Arlanda', icon: 'assets/marker-airport.png', infoWindow: {content: 'Arlanda airport'}});
-      travelMap.addMarker({
-        lat: bromma.lat, lng: bromma.lng, title: 'Bromma', icon: 'assets/marker-airport.png', infoWindow: {content: 'Bromma airport'}});
-      travelMap.addMarker({
-        lat: skavsta.lat, lng: skavsta.lng, title: 'Skavsta', icon: 'assets/marker-airport.png', infoWindow: {content: 'Skavsta airport'}});
       travelMap.addMarker({
         lat: centralen.lat, lng: centralen.lng, title: 'Central Station', icon: 'assets/marker-train.png', infoWindow: {content: 'Stockholm Central Station'}});
       travelMap.addMarker({
