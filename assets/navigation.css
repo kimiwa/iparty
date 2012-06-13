@@ -73,9 +73,11 @@ v\:fill { behavior:url(#default#VML); }
 
 /* TEXT */
 #globalheader            #globalnav li            a span { display:block; width:100%; height:30px; margin:3px auto; background:url(globalnav_text.png) no-repeat 50% 0; _background-image:url(globalnav_text.gif); }
+.ja #globalheader            #globalnav li            a span { display:block; width:100%; height:30px; margin:3px auto; background:url(globalnav_text_ja.png) no-repeat 50% 0; _background-image:url(globalnav_text.gif); }
 /*#globalheader.svg        #globalnav li            a span { background-image:url(globalnav_text.svg); }*/
 #globalheader.decelerate #globalnav li            a span,
 #globalheader.ios3       #globalnav li            a span { background-image:url(globalnav_text.png); }
+.ja #globalheader.ios3       #globalnav li            a span { background-image:url(globalnav_text_ja.png); }
 #globalheader            #globalnav li#gn-apple   a span { background-position:50% 0; }
 #globalheader            #globalnav li#gn-store   a span { background-position:50% -30px; }
 #globalheader            #globalnav li#gn-mac     a span { background-position:50% -60px; }
