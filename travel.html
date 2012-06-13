@@ -1,278 +1,240 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-  <title>iParty - Travel</title>
-  <link id="globalheader-stylesheet" rel="stylesheet" href="assets/navigation.css" type="text/css">
-  <link rel="stylesheet" href="assets/main.css" type="text/css">
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-63389-11']);
-    _gaq.push(['_trackPageview']);
+---
+layout: default
+body_id: travel
+---
 
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-</head>
-<body id="travel">
-  <nav id="globalheader" class="gn-last">
-    <ul id="globalnav" class="nosearch" role="navigation">
-      <li id="gn-apple"><a href="index.html"><span>KiMiwa</span></a></li>
-      <li id="gn-store"><a href="iparty.html"><span>iParty</span></a></li>
-      <li id="gn-iphone"><a href="rsvp.html"><span>RSVP</span></a></li>
-      <li id="gn-mac"><a href="travel.html"><span>Travel</span></a></li>
-      <li id="gn-ipod"><a href="sightseeing.html"><span>Sightseeing</span></a></li>
-    </ul>
-  </nav>
+<div id="content">
+<h2>Travel</h2>
 
-  <div id="content">
-  <h2>Travel</h2>
+<article>
+  <section class="getting-there">
+    <h3>Getting to Stockholm</h3>
+    <div class="map" id="travel_map"></div>
 
-  <article>
-    <section class="getting-there">
-      <h3>Getting to Stockholm</h3>
-      <div class="map" id="travel_map"></div>
-
-      <div class="clearfix transport-col">
-        <div class="by by-plane">
-          <h4>By Airplane <embed src="assets/noun_project_365.svg" type="image/svg+xml" class="transport-icon" /></h4>
-          <p>
-            Stockholm is served by several airports, but the biggest and best is <a href="http://www.swedavia.com/arlanda/">Arlanda</a> to the north. Several large airlines, including <a href="http://www.flysas.com/en/">SAS</a> and <a href="">Finnair</a> who have good routes to Asia, traffic Arlanda from many locations in the world. There are direct flights from some destinations, but most intercontinental flights will connect through European hubs like London and Copenhagen.
-          </p>
-          <p>
-            To go from Arlanda to central Stockholm you can take the <a href="http://www.arlandaexpress.com/">Arlanda Express</a> train or the <a href="http://www.flygbussarna.se/?lang=EN">Flygbussarna</a> airport coaches.
-          </p>
-        </div>
-
-        <div class="by by-boat clearfix">
-          <h4>By Boat <embed src="assets/noun_project_85.svg" type="image/svg+xml" class="transport-icon-large" /></h4>
-          <p>
-            Stockholm is known for its beautiful location in the archipelago. If you are flying to Helsinki you can experience this firsthand by taking a cruise ship to Stockholm.
-          </p>
-          <p>
-            Several large ferry companies run regular services between the two capitals and the trip usually takes around 18 hours. This means that you will leave Helsinki in the afternoon and arrive in Stockholm the following morning. <a href="http://www.vikingline.fi/index.asp?lang=en">Viking Line</a> and <a href="http://www.tallinksilja.com/en/">Tallink Silja</a> are the two biggest companies.
-            This is a common way for Swedish people to buy tax-free alcohol or take a short vacation.
-          </p>
-          <img src="assets/Stockholms_skargard.jpg" />
-        </div>
-      </div>
-
-      <div class="clearfix transport-col">
-        <div class="by by-car clearfix">
-          <h4>By Car <embed src="assets/noun_project_446.svg" type="image/svg+xml" class="transport-icon" /></h4>
-          <p>
-            Car is a great way to see Sweden, its endless forests close to Stockholm and rolling plains in the south. To get from mainland Europe to Sweden you will have to pass the <a href="http://uk.oresundsbron.com/page/976">Öresundsbron</a> bridge that connects Copenhagen in Denmark and Malmö in Sweden.
-          </p>
-          <p>
-            Please ask us if you want tips on where to stay along the road or where to see the best of Sweden. There are a few cities along the road that might be cool to check out, like <a href="http://en.wikipedia.org/wiki/Gr%C3%A4nna">Gränna</a> which is known for its candy canes. The trip from Malmö to Stockholm takes around 7 hours of continuous driving.
-          </p>
-          <img src="assets/Volvo_240_Estate_Wagon.jpg" />
-        </div>
-
-        <div class="by by-train clearfix">
-          <h4>By Train <embed src="assets/noun_project_67.svg" type="image/svg+xml" class="transport-icon-large" /></h4>
-          <p>
-            <a href="http://en.wikipedia.org/wiki/Stockholm_Central_Station">Stockholm Central Station</a> is the largest train station in Sweden and a connecting hub for many local trains, Arlanda Express and the subway. But to be frank, Sweden’s inter city rail network is a joke — with frequent delays and expensive prices. Unless you are travelling from Smallville, Sweden, you are better off taking an airplane or driving.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="staying divider-down">
-      <h3>Staying in Stockholm</h3>
-      <div class="map" id="hotel_map"></div>
-
-      <div class="narrow-text clearfix">
-        <p id="hotel-blurb">
-          Here are a few of the hotels and booking sites we recommend. We will gladly help you find a good hotel to stay at. Just ping us and we’ll spring into action. If you need any help to book, or to find somewhere else to stay, please let us know and we’ll help out.
+    <div class="clearfix transport-col">
+      <div class="by by-plane">
+        <h4>By Airplane <embed src="assets/noun_project_365.svg" type="image/svg+xml" class="transport-icon" /></h4>
+        <p>
+          Stockholm is served by several airports, but the biggest and best is <a href="http://www.swedavia.com/arlanda/">Arlanda</a> to the north. Several large airlines, including <a href="http://www.flysas.com/en/">SAS</a> and <a href="">Finnair</a> who have good routes to Asia, traffic Arlanda from many locations in the world. There are direct flights from some destinations, but most intercontinental flights will connect through European hubs like London and Copenhagen.
         </p>
-      
-        <h4>Hotels</h4>
-        <dl>
-          <dt class="hotelj"><a href="http://eng.hotelj.com/">Hotel J</a> ☆☆☆☆</dt>
-          <dd class="hotelj">
-            <img src="assets/Hotel_J_Exterior.jpg" class="left img1" />
-            <img src="assets/Hotel_J_Room.jpg" class="left img2" />
-            <img src="assets/Hotel_J_tree.jpg" class="left img3" />
-            <p>
-              This is where iParty will take place. It’s located about 15 minutes by cab from Stockholm, has American inspired rooms and a beautiful view of the archipelago inlet to Stockholm.
-            </p>
-          </dd>
-
-          <dt><a href="http://www.storyhotels.com/">Story Hotel</a> ☆☆☆☆</dt>
-          <dd class="story">
-            <p>
-              <img src="assets/storyhotel_The_Backyard.jpg" class="img1" />
-              Miwa and Kim are staying here between Thursday and Monday. A weird place with great art, located in central Stockholm close to hip Stureplan.
-              <img src="assets/storyhotel_LilyDamSuiteBed.jpg" class="img2" />
-            </p>
-          </dd>
-        </dl>
-
-        <dl>
-          <div class="ippan_hotel_col clearfix">
-            <dt class="ippan_hotel"><a href="http://www.nobishotel.se/">Nobis Hotel</a> ☆☆☆☆☆</dt>
-            <dd class="ippan_hotel">
-              <p>
-                <img src="assets/nobis_hotel.jpg" />
-                Luxurious and cool hotel on one of the most expensive streets in Stockholm, close to Story Hotel.
-              </p>
-            </dd>
-
-            <dt class="ippan_hotel"><a href="http://www.thecollectorshotels.se/en/lord-nelson/start/">Lord Nelson</a> ☆☆☆</dt>
-            <dd class="ippan_hotel">
-              <p>
-                <img src="assets/Lord_Nelson.jpg" />
-                Quaint mid range hotel in Gamla Stan, the old parts of the city.
-              </p>
-            </dd>
-
-            <dt class="ippan_hotel"><a href="http://www.thecollectorshotels.se/en/lady-hamilton/">Lady Hamilton</a> ☆☆☆☆</dt>
-            <dd class="ippan_hotel">
-              <p>
-                <img src="assets/LadyHamilton.jpg" />
-                Feminine and romantic hotel next to the Royal Palace in Gamla Stan, Stockholm’s Old Town, with lots of antiques in the Swedish peasant style.
-              </p>
-            </dd>
-
-            <dt class="ippan_hotel"><a href="http://www.thecollectorshotels.se/en/victory/about-the-hotel/">Victory Hotel</a> ☆☆☆☆</dt>
-            <dd class="ippan_hotel">
-              <p>
-                <img src="assets/VictoryHotel.jpg" />
-                Personal and exclusive little “boutique hotel” in Gamla Stan, just like the other group hotels, Lord Nelson and Lady Hamilton.
-              </p>
-            </dd>
-          </div>
-
-          <div class="ippan_hotel_col ippan_hotel_col2 clearfix">
-            <dt class="ippan_hotel"><a href="http://www.freyshotels.com/freyshotel/default-en.html">Freys Hotel</a> ☆☆☆</dt>
-            <dd class="ippan_hotel">
-              <p>
-                <img src="assets/FreysHotel.jpg" />
-                Three star boutique hotel located in the central part of Stockholm.
-              </p>
-            </dd>
-
-            <dt class="ippan_hotel"><a href="http://www.freyshotels.com/lillaradmannen/default-en.html">Lilla Radmannen</a> ☆☆☆</dt>
-            <dd class="ippan_hotel">
-              <p>
-                <img src="assets/LillaRadmannen.jpg" />
-                Stylish hotel located in a peaceful area in the heart of the city.
-              </p>
-            </dd>
-
-            <dt class="ippan_hotel"><a href="http://www.freyshotels.com/hotelbakfickan/default-en.html">Hotel Bakfickan</a> ☆☆</dt>
-            <dd class="ippan_hotel">
-              <p>
-                <img src="assets/HotelBakfickan.jpg" />
-                Comfortable central Stockholm budget hotel with 26 rooms, annexed to Hotel Lilla Radmannen.
-              </p>
-            </dd>
-
-            <dt class="ippan_hotel"><a href="http://www.rival.se/">Hotel Rival</a> ☆☆☆☆</dt>
-            <dd class="ippan_hotel">
-              <p>
-                <img src="assets/HotelRival.jpg" />
-                Widely hailed as Stockholm’s first boutique hotel, located in the heart of the hip Södermalm district.
-              </p>
-            </dd>
-          </div>
-        </dl>
-
-        <div id="booking-sites">
-          <h4>Booking sites</h4>
-          <ul>
-            <li class="first">
-              <a href="http://agoda.com/">agoda.com</a><br />
-              <a href="http://agoda.jp/">agoda.jp</a>
-            </li>
-            <li>
-              <a href="http://tablethotels.com/">tablethotels.com</a><br />
-              <a href="http://tablethotels.jp/">tablethotels.jp</a>
-            </li>
-            <li>
-              <a href="http://www.hotels.com/">hotels.com</a><br />
-              <a href="http://jp.hotels.com/">jp.hotels.com</a>
-            </li>
-            <li>
-              <a href="http://www.designhotels.com/">designhotels.com</a>
-            </li>
-          </ul>
-        </div>
+        <p>
+          To go from Arlanda to central Stockholm you can take the <a href="http://www.arlandaexpress.com/">Arlanda Express</a> train or the <a href="http://www.flygbussarna.se/?lang=EN">Flygbussarna</a> airport coaches.
+        </p>
       </div>
-    </section>
-  </article>
-  </div>
 
-  <footer id="globalfooter">
-    <div class="gf-sosumi">
-      <p>Inspired by Apple. No rights reserved. Made with love by kiMiwa. You can contact us at <a href="mailto:kim.ahlstrom@gmail.com">kim.ahlstrom@gmail.com</a> and <a href="mailto:miwa505@gmail.com">miwa505@gmail.com</a>.</p>
+      <div class="by by-boat clearfix">
+        <h4>By Boat <embed src="assets/noun_project_85.svg" type="image/svg+xml" class="transport-icon-large" /></h4>
+        <p>
+          Stockholm is known for its beautiful location in the archipelago. If you are flying to Helsinki you can experience this firsthand by taking a cruise ship to Stockholm.
+        </p>
+        <p>
+          Several large ferry companies run regular services between the two capitals and the trip usually takes around 18 hours. This means that you will leave Helsinki in the afternoon and arrive in Stockholm the following morning. <a href="http://www.vikingline.fi/index.asp?lang=en">Viking Line</a> and <a href="http://www.tallinksilja.com/en/">Tallink Silja</a> are the two biggest companies.
+          This is a common way for Swedish people to buy tax-free alcohol or take a short vacation.
+        </p>
+        <img src="assets/Stockholms_skargard.jpg" />
+      </div>
     </div>
-  </footer><!--/globalfooter-->
 
-  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCBI4Q_YJoYHTPw2_1P4FghACxQt4Wsp5w&sensor=false"></script>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  <script src="assets/gmaps.js" type="text/javascript" charset="utf-8"></script>
-  <script src="assets/globalnav.js" type="text/javascript" charset="utf-8"></script>
-  <script>
-    $(function(){
-      AC.GlobalNav.Instance = new AC.GlobalNav();
+    <div class="clearfix transport-col">
+      <div class="by by-car clearfix">
+        <h4>By Car <embed src="assets/noun_project_446.svg" type="image/svg+xml" class="transport-icon" /></h4>
+        <p>
+          Car is a great way to see Sweden, its endless forests close to Stockholm and rolling plains in the south. To get from mainland Europe to Sweden you will have to pass the <a href="http://uk.oresundsbron.com/page/976">Öresundsbron</a> bridge that connects Copenhagen in Denmark and Malmö in Sweden.
+        </p>
+        <p>
+          Please ask us if you want tips on where to stay along the road or where to see the best of Sweden. There are a few cities along the road that might be cool to check out, like <a href="http://en.wikipedia.org/wiki/Gr%C3%A4nna">Gränna</a> which is known for its candy canes. The trip from Malmö to Stockholm takes around 7 hours of continuous driving.
+        </p>
+        <img src="assets/Volvo_240_Estate_Wagon.jpg" />
+      </div>
 
-      // Travel
-      var travel_center = {lat: 59.500382, lng: 18.105393};
-      var arlanda = {lat: 59.653905, lng: 17.939303};
-      var centralen = {lat: 59.330958, lng: 18.056851};
-      var viking = {lat: 59.315973, lng: 18.097115};
-      var silja = {lat: 59.350376, lng: 18.106944};
+      <div class="by by-train clearfix">
+        <h4>By Train <embed src="assets/noun_project_67.svg" type="image/svg+xml" class="transport-icon-large" /></h4>
+        <p>
+          <a href="http://en.wikipedia.org/wiki/Stockholm_Central_Station">Stockholm Central Station</a> is the largest train station in Sweden and a connecting hub for many local trains, Arlanda Express and the subway. But to be frank, Sweden’s inter city rail network is a joke — with frequent delays and expensive prices. Unless you are travelling from Smallville, Sweden, you are better off taking an airplane or driving.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="staying divider-down">
+    <h3>Staying in Stockholm</h3>
+    <div class="map" id="hotel_map"></div>
+
+    <div class="narrow-text clearfix">
+      <p id="hotel-blurb">
+        Here are a few of the hotels and booking sites we recommend. We will gladly help you find a good hotel to stay at. Just ping us and we’ll spring into action. If you need any help to book, or to find somewhere else to stay, please let us know and we’ll help out.
+      </p>
       
-      travelMap = new GMaps({div: '#travel_map', lat: travel_center.lat, lng: travel_center.lng, zoom: 9});
-      travelMap.addMarker({
-        lat: arlanda.lat, lng: arlanda.lng, title: 'Arlanda', icon: 'assets/marker-airport.png', infoWindow: {content: 'Arlanda airport'}});
-      travelMap.addMarker({
-        lat: centralen.lat, lng: centralen.lng, title: 'Central Station', icon: 'assets/marker-train.png', infoWindow: {content: 'Stockholm Central Station'}});
-      travelMap.addMarker({
-        lat: viking.lat, lng: viking.lng, title: 'Viking Line Harbour', icon: 'assets/marker-harbor.png', infoWindow: {content: 'Viking Line Harbour'}});
-      travelMap.addMarker({
-        lat: silja.lat, lng: silja.lng, title: 'Tallink Silja Harbour', icon: 'assets/marker-harbor.png', infoWindow: {content: 'Tallink Silja Harbour'}});
+      <h4>Hotels</h4>
+      <dl>
+        <dt class="hotelj"><a href="http://eng.hotelj.com/">Hotel J</a> ☆☆☆☆</dt>
+        <dd class="hotelj">
+          <img src="assets/Hotel_J_Exterior.jpg" class="left img1" />
+          <img src="assets/Hotel_J_Room.jpg" class="left img2" />
+          <img src="assets/Hotel_J_tree.jpg" class="left img3" />
+          <p>
+            This is where iParty will take place. It’s located about 15 minutes by cab from Stockholm, has American inspired rooms and a beautiful view of the archipelago inlet to Stockholm.
+          </p>
+        </dd>
 
-      // Hotels
-      var hotel_center = {lat: 59.328382, lng: 18.105393};
-      var hotelj = {lat: 59.318316, lng: 18.165123};
-      var story = {lat: 59.334734, lng: 18.075113};
-      var nobis = {lat: 59.333166, lng: 18.073808};
-      var nelson = {lat: 59.325322, lng: 18.069021};
-      var hamilton = {lat: 59.325728, lng: 18.069247};
-      var victory = {lat: 59.324344, lng: 18.067863};
-      var freys = {lat: 59.33292, lng: 18.058899};
-      var radmannen = {lat: 59.339273, lng: 18.0548};
-      var bakfickan = {lat: 59.339127, lng: 18.054215};
-      var rival = {lat: 59.318165, lng: 18.063631};
+        <dt><a href="http://www.storyhotels.com/">Story Hotel</a> ☆☆☆☆</dt>
+        <dd class="story">
+          <p>
+            <img src="assets/storyhotel_The_Backyard.jpg" class="img1" />
+            Miwa and Kim are staying here between Thursday and Monday. A weird place with great art, located in central Stockholm close to hip Stureplan.
+            <img src="assets/storyhotel_LilyDamSuiteBed.jpg" class="img2" />
+          </p>
+        </dd>
+      </dl>
+
+      <dl>
+        <div class="ippan_hotel_col clearfix">
+          <dt class="ippan_hotel"><a href="http://www.nobishotel.se/">Nobis Hotel</a> ☆☆☆☆☆</dt>
+          <dd class="ippan_hotel">
+            <p>
+              <img src="assets/nobis_hotel.jpg" />
+              Luxurious and cool hotel on one of the most expensive streets in Stockholm, close to Story Hotel.
+            </p>
+          </dd>
+
+          <dt class="ippan_hotel"><a href="http://www.thecollectorshotels.se/en/lord-nelson/start/">Lord Nelson</a> ☆☆☆</dt>
+          <dd class="ippan_hotel">
+            <p>
+              <img src="assets/Lord_Nelson.jpg" />
+              Quaint mid range hotel in Gamla Stan, the old parts of the city.
+            </p>
+          </dd>
+
+          <dt class="ippan_hotel"><a href="http://www.thecollectorshotels.se/en/lady-hamilton/">Lady Hamilton</a> ☆☆☆☆</dt>
+          <dd class="ippan_hotel">
+            <p>
+              <img src="assets/LadyHamilton.jpg" />
+              Feminine and romantic hotel next to the Royal Palace in Gamla Stan, Stockholm’s Old Town, with lots of antiques in the Swedish peasant style.
+            </p>
+          </dd>
+
+          <dt class="ippan_hotel"><a href="http://www.thecollectorshotels.se/en/victory/about-the-hotel/">Victory Hotel</a> ☆☆☆☆</dt>
+          <dd class="ippan_hotel">
+            <p>
+              <img src="assets/VictoryHotel.jpg" />
+              Personal and exclusive little “boutique hotel” in Gamla Stan, just like the other group hotels, Lord Nelson and Lady Hamilton.
+            </p>
+          </dd>
+        </div>
+
+        <div class="ippan_hotel_col ippan_hotel_col2 clearfix">
+          <dt class="ippan_hotel"><a href="http://www.freyshotels.com/freyshotel/default-en.html">Freys Hotel</a> ☆☆☆</dt>
+          <dd class="ippan_hotel">
+            <p>
+              <img src="assets/FreysHotel.jpg" />
+              Three star boutique hotel located in the central part of Stockholm.
+            </p>
+          </dd>
+
+          <dt class="ippan_hotel"><a href="http://www.freyshotels.com/lillaradmannen/default-en.html">Lilla Radmannen</a> ☆☆☆</dt>
+          <dd class="ippan_hotel">
+            <p>
+              <img src="assets/LillaRadmannen.jpg" />
+              Stylish hotel located in a peaceful area in the heart of the city.
+            </p>
+          </dd>
+
+          <dt class="ippan_hotel"><a href="http://www.freyshotels.com/hotelbakfickan/default-en.html">Hotel Bakfickan</a> ☆☆</dt>
+          <dd class="ippan_hotel">
+            <p>
+              <img src="assets/HotelBakfickan.jpg" />
+              Comfortable central Stockholm budget hotel with 26 rooms, annexed to Hotel Lilla Radmannen.
+            </p>
+          </dd>
+
+          <dt class="ippan_hotel"><a href="http://www.rival.se/">Hotel Rival</a> ☆☆☆☆</dt>
+          <dd class="ippan_hotel">
+            <p>
+              <img src="assets/HotelRival.jpg" />
+              Widely hailed as Stockholm’s first boutique hotel, located in the heart of the hip Södermalm district.
+            </p>
+          </dd>
+        </div>
+      </dl>
+
+      <div id="booking-sites">
+        <h4>Booking sites</h4>
+        <ul>
+          <li class="first">
+            <a href="http://agoda.com/">agoda.com</a><br />
+            <a href="http://agoda.jp/">agoda.jp</a>
+          </li>
+          <li>
+            <a href="http://tablethotels.com/">tablethotels.com</a><br />
+            <a href="http://tablethotels.jp/">tablethotels.jp</a>
+          </li>
+          <li>
+            <a href="http://www.hotels.com/">hotels.com</a><br />
+            <a href="http://jp.hotels.com/">jp.hotels.com</a>
+          </li>
+          <li>
+            <a href="http://www.designhotels.com/">designhotels.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</article>
+</div>
+
+<script>
+  $(function(){
+    // Travel
+    var travel_center = {lat: 59.500382, lng: 18.105393};
+    var arlanda = {lat: 59.653905, lng: 17.939303};
+    var centralen = {lat: 59.330958, lng: 18.056851};
+    var viking = {lat: 59.315973, lng: 18.097115};
+    var silja = {lat: 59.350376, lng: 18.106944};
       
-      hotelMap = new GMaps({div: '#hotel_map', lat: hotel_center.lat, lng: hotel_center.lng, zoom: 12});
-      hotelMap.addMarker({
-        lat: hotelj.lat, lng: hotelj.lng, title: 'Hotel J', icon: 'assets/marker-villa.png', infoWindow: {content: 'Hotel J'}});
-      hotelMap.addMarker({
-        lat: story.lat, lng: story.lng, title: 'Story Hotel', icon: 'assets/marker-lodging.png', infoWindow: {content: 'Story Hotel'}});
-      hotelMap.addMarker({
-        lat: nobis.lat, lng: nobis.lng, title: 'Nobis Hotel', icon: 'assets/marker-lodging.png', infoWindow: {content: 'Nobis Hotel'}});
-      hotelMap.addMarker({
-        lat: nelson.lat, lng: nelson.lng, title: 'Lord Nelson Hotel', icon: 'assets/marker-lodging.png', infoWindow: {content: 'Lord Nelson Hotel'}});
-      hotelMap.addMarker({
-        lat: hamilton.lat, lng: hamilton.lng, title: 'Lady Hamilton Hotel', icon: 'assets/marker-lodging.png', infoWindow: {content: 'Lady Hamilton Hotel'}});
-      hotelMap.addMarker({
-        lat: victory.lat, lng: victory.lng, title: 'Victory Hotel', icon: 'assets/marker-lodging.png', infoWindow: {content: 'Victory Hotel'}});
-      hotelMap.addMarker({
-        lat: freys.lat, lng: freys.lng, title: 'Freys Hotel', icon: 'assets/marker-lodging.png', infoWindow: {content: 'Freys Hotel'}});
-      hotelMap.addMarker({
-        lat: radmannen.lat, lng: radmannen.lng, title: 'Lilla Radmannen', icon: 'assets/marker-lodging.png', infoWindow: {content: 'Lilla Radmannen'}});
-      hotelMap.addMarker({
-        lat: bakfickan.lat, lng: bakfickan.lng, title: 'Hotel Bakfickan', icon: 'assets/marker-lodging.png', infoWindow: {content: 'Hotel Bakfickan'}});
-      hotelMap.addMarker({
-        lat: rival.lat, lng: rival.lng, title: 'Hotel Rival', icon: 'assets/marker-lodging.png', infoWindow: {content: 'Hotel Rival'}});
-    });
-  </script>
-</body>
-</html>
+    travelMap = new GMaps({div: '#travel_map', lat: travel_center.lat, lng: travel_center.lng, zoom: 9});
+    travelMap.addMarker({
+      lat: arlanda.lat, lng: arlanda.lng, title: 'Arlanda', icon: 'assets/marker-airport.png', infoWindow: {content: 'Arlanda airport'}});
+    travelMap.addMarker({
+      lat: centralen.lat, lng: centralen.lng, title: 'Central Station', icon: 'assets/marker-train.png', infoWindow: {content: 'Stockholm Central Station'}});
+    travelMap.addMarker({
+      lat: viking.lat, lng: viking.lng, title: 'Viking Line Harbour', icon: 'assets/marker-harbor.png', infoWindow: {content: 'Viking Line Harbour'}});
+    travelMap.addMarker({
+      lat: silja.lat, lng: silja.lng, title: 'Tallink Silja Harbour', icon: 'assets/marker-harbor.png', infoWindow: {content: 'Tallink Silja Harbour'}});
+
+    // Hotels
+    var hotel_center = {lat: 59.328382, lng: 18.105393};
+    var hotelj = {lat: 59.318316, lng: 18.165123};
+    var story = {lat: 59.334734, lng: 18.075113};
+    var nobis = {lat: 59.333166, lng: 18.073808};
+    var nelson = {lat: 59.325322, lng: 18.069021};
+    var hamilton = {lat: 59.325728, lng: 18.069247};
+    var victory = {lat: 59.324344, lng: 18.067863};
+    var freys = {lat: 59.33292, lng: 18.058899};
+    var radmannen = {lat: 59.339273, lng: 18.0548};
+    var bakfickan = {lat: 59.339127, lng: 18.054215};
+    var rival = {lat: 59.318165, lng: 18.063631};
+      
+    hotelMap = new GMaps({div: '#hotel_map', lat: hotel_center.lat, lng: hotel_center.lng, zoom: 12});
+    hotelMap.addMarker({
+      lat: hotelj.lat, lng: hotelj.lng, title: 'Hotel J', icon: 'assets/marker-villa.png', infoWindow: {content: 'Hotel J'}});
+    hotelMap.addMarker({
+      lat: story.lat, lng: story.lng, title: 'Story Hotel', icon: 'assets/marker-lodging.png', infoWindow: {content: 'Story Hotel'}});
+    hotelMap.addMarker({
+      lat: nobis.lat, lng: nobis.lng, title: 'Nobis Hotel', icon: 'assets/marker-lodging.png', infoWindow: {content: 'Nobis Hotel'}});
+    hotelMap.addMarker({
+      lat: nelson.lat, lng: nelson.lng, title: 'Lord Nelson Hotel', icon: 'assets/marker-lodging.png', infoWindow: {content: 'Lord Nelson Hotel'}});
+    hotelMap.addMarker({
+      lat: hamilton.lat, lng: hamilton.lng, title: 'Lady Hamilton Hotel', icon: 'assets/marker-lodging.png', infoWindow: {content: 'Lady Hamilton Hotel'}});
+    hotelMap.addMarker({
+      lat: victory.lat, lng: victory.lng, title: 'Victory Hotel', icon: 'assets/marker-lodging.png', infoWindow: {content: 'Victory Hotel'}});
+    hotelMap.addMarker({
+      lat: freys.lat, lng: freys.lng, title: 'Freys Hotel', icon: 'assets/marker-lodging.png', infoWindow: {content: 'Freys Hotel'}});
+    hotelMap.addMarker({
+      lat: radmannen.lat, lng: radmannen.lng, title: 'Lilla Radmannen', icon: 'assets/marker-lodging.png', infoWindow: {content: 'Lilla Radmannen'}});
+    hotelMap.addMarker({
+      lat: bakfickan.lat, lng: bakfickan.lng, title: 'Hotel Bakfickan', icon: 'assets/marker-lodging.png', infoWindow: {content: 'Hotel Bakfickan'}});
+    hotelMap.addMarker({
+      lat: rival.lat, lng: rival.lng, title: 'Hotel Rival', icon: 'assets/marker-lodging.png', infoWindow: {content: 'Hotel Rival'}});
+  });
+</script>
+
