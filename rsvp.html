@@ -1,147 +1,108 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-  <title>iParty - RSVP</title>
-  <link id="globalheader-stylesheet" rel="stylesheet" href="assets/navigation.css" type="text/css">
-  <link rel="stylesheet" href="assets/main.css" type="text/css">
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-63389-11']);
-    _gaq.push(['_trackPageview']);
+---
+layout: default
+body_id: rsvp
+---
 
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-  <script src="http://www.parsecdn.com/js/parse-1.0.2.min.js"></script>
-</head>
-<body id="rsvp">
-  <nav id="globalheader" class="gn-last">
-    <ul id="globalnav" class="nosearch" role="navigation">
-      <li id="gn-apple"><a href="index.html"><span>KiMiwa</span></a></li>
-      <li id="gn-store"><a href="iparty.html"><span>iParty</span></a></li>
-      <li id="gn-iphone"><a href="rsvp.html"><span>RSVP</span></a></li>
-      <li id="gn-mac"><a href="travel.html"><span>Travel</span></a></li>
-      <li id="gn-ipod"><a href="sightseeing.html"><span>Sightseeing</span></a></li>
-    </ul>
-  </nav>
+<div id="content">
+<h2>RSVP</h2>
 
-  <div id="content">
-  <h2>RSVP</h2>
-
-  <article>
-    <form id="rsvp_form">
-      <p id="name_group">
-        <label for="name" class="required"><strong>Your name</strong></label><br />
-        <input type="text" name="name" id="name" />
-      </p>
-      <p id="rsvp_group">
-        <label class="required"><strong>Will you attend?</strong></label><br />
-        <input type="radio" name="rsvp_status" id="rsvp_yes" value="yes" /> <label for="rsvp_yes">Yes</label><br />
-        <input type="radio" name="rsvp_status" id="rsvp_no" value="no" /> <label for="rsvp_no">No</label>
-      </p>
-      <p id="email_group">
-        <label for="email" class="required"><strong>Email</strong></label><br />
-        <input type="text" name="email" id="email" />
-      </p>
-      <p id="address_group">
-        <label for="address" class="required"><strong>Address</strong></label><br />
-        <textarea name="address" id="address"></textarea>
-      </p>
-      <div>
-        <label><strong>For out of town guests</strong></label><br />
-        <div class="arrive-leave arrive">
-          <label for="arriving">Date arriving</label><br />
-          <input type="text" name="arriving" id="arriving" /><br />
-        </div>
-        <div class="arrive-leave leave">
-          <label for="leaving">Date leaving</label><br />
-          <input type="text" name="leaving" id="leaving" />
-        </div>
+<article>
+  <form id="rsvp_form">
+    <p id="name_group">
+      <label for="name" class="required"><strong>Your name</strong></label><br />
+      <input type="text" name="name" id="name" />
+    </p>
+    <p id="rsvp_group">
+      <label class="required"><strong>Will you attend?</strong></label><br />
+      <input type="radio" name="rsvp_status" id="rsvp_yes" value="yes" /> <label for="rsvp_yes">Yes</label><br />
+      <input type="radio" name="rsvp_status" id="rsvp_no" value="no" /> <label for="rsvp_no">No</label>
+    </p>
+    <p id="email_group">
+      <label for="email" class="required"><strong>Email</strong></label><br />
+      <input type="text" name="email" id="email" />
+    </p>
+    <p id="address_group">
+      <label for="address" class="required"><strong>Address</strong></label><br />
+      <textarea name="address" id="address"></textarea>
+    </p>
+    <div>
+      <label><strong>For out of town guests</strong></label><br />
+      <div class="arrive-leave arrive">
+        <label for="arriving">Date arriving</label><br />
+        <input type="text" name="arriving" id="arriving" /><br />
       </div>
-      <p>
-        <label for="comments"><strong>Comments</strong></label><br />
-        <textarea name="comments" id="comments"></textarea>
-      </p>
-      <p>
-        <input type="submit" value="Send" />
-        <span id="status">Sending ...</span>
-      </p>
-    </form>
-  </article>
-  
-  <footer id="globalfooter">
-    <div class="gf-sosumi">
-      <p>Inspired by Apple. No rights reserved. Made with love by kiMiwa. You can contact us at <a href="mailto:kim.ahlstrom@gmail.com">kim.ahlstrom@gmail.com</a> and <a href="mailto:miwa505@gmail.com">miwa505@gmail.com</a>.</p>
+      <div class="arrive-leave leave">
+        <label for="leaving">Date leaving</label><br />
+        <input type="text" name="leaving" id="leaving" />
+      </div>
     </div>
-  </footer><!--/globalfooter-->
+    <p>
+      <label for="comments"><strong>Comments</strong></label><br />
+      <textarea name="comments" id="comments"></textarea>
+    </p>
+    <p>
+      <input type="submit" value="Send" />
+      <span id="status">Sending ...</span>
+    </p>
+  </form>
+</article>
+  
+<script>
+  $(function(){
+    Parse.initialize("FMznVXCMwnXGYbxioZymeOs8tjv9h2FyBH12FDRS", "muFe8YEYPKFGqFXMCoG131hbIytyHqe511RhAsr8");
+    var RSVP = Parse.Object.extend("RSVP");
+    var rsvp = new RSVP();
 
-  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCBI4Q_YJoYHTPw2_1P4FghACxQt4Wsp5w&sensor=false"></script>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  <script src="assets/globalnav.js" type="text/javascript" charset="utf-8"></script>
-  <script>
-    $(function(){
-      AC.GlobalNav.Instance = new AC.GlobalNav();
+    $('#rsvp_form').submit(function(e){
+      e.preventDefault();
+      $('.please_fill_in').removeClass('please_fill_in');
 
-      Parse.initialize("FMznVXCMwnXGYbxioZymeOs8tjv9h2FyBH12FDRS", "muFe8YEYPKFGqFXMCoG131hbIytyHqe511RhAsr8");
-      var RSVP = Parse.Object.extend("RSVP");
-      var rsvp = new RSVP();
+      var data = {
+        name: $('#name').val(),
+        attending: $('input:radio[name=rsvp_status]:checked').val(),
+        email: $('#email').val(),
+        address: $('#address').val(),
+        arriving: $('#arriving').val(),
+        leaving: $('#leaving').val(),
+        comments: $('#comments').val()
+      };
+      console.log(data);
 
-      $('#rsvp_form').submit(function(e){
-        e.preventDefault();
-        $('.please_fill_in').removeClass('please_fill_in');
+      var ok = true;
+      if ( '' == data.name ) {
+        $('#name_group').addClass('please_fill_in');
+        ok = false;
+      }
+      if ( undefined == data.attending ) {
+        $('#rsvp_group').addClass('please_fill_in');
+        ok = false;
+      }
+      if ( '' == data.email ) {
+        $('#email_group').addClass('please_fill_in');
+        ok = false;
+      }
+      if ( '' == data.address ) {
+        $('#address_group').addClass('please_fill_in');
+        ok = false;
+      }
 
-        var data = {
-          name: $('#name').val(),
-          attending: $('input:radio[name=rsvp_status]:checked').val(),
-          email: $('#email').val(),
-          address: $('#address').val(),
-          arriving: $('#arriving').val(),
-          leaving: $('#leaving').val(),
-          comments: $('#comments').val()
-        };
-        console.log(data);
+      if ( !ok ) {
+        return;
+      }
 
-        var ok = true;
-        if ( '' == data.name ) {
-          $('#name_group').addClass('please_fill_in');
-          ok = false;
-        }
-        if ( undefined == data.attending ) {
-          $('#rsvp_group').addClass('please_fill_in');
-          ok = false;
-        }
-        if ( '' == data.email ) {
-          $('#email_group').addClass('please_fill_in');
-          ok = false;
-        }
-        if ( '' == data.address ) {
-          $('#address_group').addClass('please_fill_in');
-          ok = false;
-        }
+      $('input').prop('disabled', true);
+      $('textarea').prop('disabled', true);
+      $('#status').show();
 
-        if ( !ok ) {
-          return;
-        }
-
-        $('input').prop('disabled', true);
-        $('textarea').prop('disabled', true);
-        $('#status').show();
-
-        rsvp.save(data, {
-          success: function(object) {
-            if ( 'yes' == data.attending) {
-              $('#status').text('Sweet, we’re looking forward to seeing you!').addClass('yay');
-            } else {
-              $('#status').text('We thought we meant more to you :(').addClass('sad');
-            }
+      rsvp.save(data, {
+        success: function(object) {
+          if ( 'yes' == data.attending) {
+            $('#status').text('Sweet, we’re looking forward to seeing you!').addClass('yay');
+          } else {
+            $('#status').text('We thought we meant more to you :(').addClass('sad');
           }
-        });
+        }
       });
     });
-  </script>
-</body>
-</html>
+  });
+</script>
