@@ -73,7 +73,7 @@ article { margin: 0; padding: 0; background: white; }
 #rsvp label { line-height: 25px; }
 #rsvp .arrive-leave { width: 49%; margin: 0 0 1em 0; padding: 0; }
 #rsvp .arrive { float: left; }
-#rsvp .leave { float: right; width: 150px; }
+#rsvp .leave { float: right; width: 150px; clear: right; }
 #rsvp .arrive-leave input { width: 150px; }
 #rsvp input[type=submit] { font-size: 2em; width: 60px; }
 @media only screen and (max-device-width: 480px) {
