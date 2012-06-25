@@ -40,7 +40,8 @@ article { font-size: 1.167em; line-height: 1.4285em; color: #333; word-spacing: 
 /* Common */
 #content { margin: 0 auto; width: 980px; }
 article { margin: 0; padding: 0; background: white; }
-#lang_select { position: fixed; left: 5px; top: 2px; width: 70px; }
+#lang_select { position: fixed; right: 5px; top: 2px; width: 70px; text-align: right; }
+#lang_select a { color: #666; text-decoration: underline; }
 
 /* Index */
 #cover_art { width: 400px; margin: 60px auto; }
