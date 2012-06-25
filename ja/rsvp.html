@@ -1,0 +1,111 @@
+---
+layout: default
+body_id: rsvp
+body_class: ja
+title: - RSVP
+---
+
+<div id="content">
+<h2>RSVP</h2>
+
+<article>
+  <form id="rsvp_form">
+    <p id="name_group">
+      <label for="name" class="required"><strong>氏名</strong></label><br />
+      <input type="text" name="name" id="name" />
+    </p>
+    <p id="rsvp_group">
+      <label class="required"><strong>どちらかを○で選んでください</strong></label><br />
+      <input type="radio" name="rsvp_status" id="rsvp_yes" value="yes" /> <label for="rsvp_yes">ご出席</label><br />
+      <input type="radio" name="rsvp_status" id="rsvp_no" value="no" /> <label for="rsvp_no">ご欠席</label>
+    </p>
+    <p id="email_group">
+      <label for="email" class="required"><strong>メールアドレス</strong></label><br />
+      <input type="text" name="email" id="email" />
+    </p>
+    <p id="address_group">
+      <label for="address" class="required"><strong>住所</strong></label><br />
+      <textarea name="address" id="address"></textarea>
+    </p>
+    <div>
+      <label><strong>スウェーデンにお住まいでない方</strong></label><br />
+      <div class="arrive-leave arrive">
+        <label for="arriving">ストックホルム到着日</label><br />
+        <input type="text" name="arriving" id="arriving" /><br />
+      </div>
+      <div class="arrive-leave leave">
+        <label for="leaving">ストックホルム出発日</label><br />
+        <input type="text" name="leaving" id="leaving" />
+      </div>
+    </div>
+    <p>
+      <label for="comments"><strong>コメント</strong></label><br />
+      <textarea name="comments" id="comments"></textarea>
+    </p>
+    <p>
+      <input type="submit" value="送信" />
+      <span id="status">送信中 ...</span>
+    </p>
+  </form>
+</article>
+  
+<script>
+  $(function(){
+    Parse.initialize("FMznVXCMwnXGYbxioZymeOs8tjv9h2FyBH12FDRS", "muFe8YEYPKFGqFXMCoG131hbIytyHqe511RhAsr8");
+    var RSVP = Parse.Object.extend("RSVP");
+    var rsvp = new RSVP();
+
+    $('#rsvp_form').submit(function(e){
+      e.preventDefault();
+      $('.please_fill_in').removeClass('please_fill_in');
+
+      var data = {
+        name: $('#name').val(),
+        attending: $('input:radio[name=rsvp_status]:checked').val(),
+        email: $('#email').val(),
+        address: $('#address').val(),
+        arriving: $('#arriving').val(),
+        leaving: $('#leaving').val(),
+        comments: $('#comments').val()
+      };
+      console.log(data);
+
+      var ok = true;
+      if ( '' == data.name ) {
+        $('#name_group').addClass('please_fill_in');
+        ok = false;
+      }
+      if ( undefined == data.attending ) {
+        $('#rsvp_group').addClass('please_fill_in');
+        ok = false;
+      }
+      if ( '' == data.email ) {
+        $('#email_group').addClass('please_fill_in');
+        ok = false;
+      }
+      if ( '' == data.address ) {
+        $('#address_group').addClass('please_fill_in');
+        ok = false;
+      }
+
+      if ( !ok ) {
+        return;
+      }
+
+      $('input').prop('disabled', true);
+      $('textarea').prop('disabled', true);
+      $('#status').show();
+
+      rsvp.save(data, {
+        success: function(object) {
+          if ( 'yes' == data.attending) {
+            $('#status').text('ヤッタ〜！31日にお会いするのを楽しみにしています♥').addClass('yay');
+          } else {
+            $('#status').text('"え〜、残念・・・
+。・゜・(/Д`)・゜・。うわぁぁぁぁん "').addClass('sad');
+          }
+        }
+      });
+    });
+  });
+</script>
