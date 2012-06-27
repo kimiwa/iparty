@@ -99,11 +99,14 @@ article { margin: 0; padding: 0; background: white; }
 #travel .transport-col { float: left; width: 363px; margin: 0 40px 0 35px; padding: 0; text-align: justify; }
 #travel .by { width: 363px; margin: 0 35px 15px 35px; float: left; }
 #travel .by-plane {  height: 275px; clear: none; }
+#travel.lang_ja .by-plane {  height: 207px; clear: none; }
 #travel .by-car { height: 493px; }
+#travel.lang_ja .by-car { height: 340px; }
 #travel .by-car img { margin: 15px 0 10px 0px; opacity: 0.9; border-radius: 5px; width: 363px; }
+#travel.lang_ja .by-car img { margin: 5px 0 10px 0px; }
 #travel .by-boat img { margin: 5px 0 10px 0px; opacity: 0.9; border-radius: 5px; width: 363px; }
 #travel .by-boat { clear: none; }
-#travel .by-train { }
+#travel.lang_ja .by-train { margin-bottom: 40px; }
 #travel .transport-icon { height: 13px; margin-left: 10px; width: 30px; }
 #travel .transport-icon-large { height: 17px; margin-left: 10px; width: 30px; }
 #travel #hotel-blurb { margin-bottom: 3em; }
