@@ -48,8 +48,14 @@ article { margin: 0; padding: 0; background: white; }
 #cover_art a { border-width: 0; }
 
 /* iParty */
-#hello { margin: 40px auto 100px auto; display: block; }
-#map_canvas { width: 400px; height: 300px; }
+#iparty { background: #F2F2F2 url(square_pattern.jpg) repeat 0px 0px; }
+#iparty article { border-radius: 4px; -webkit-box-shadow: rgba(0, 0, 0, 0.296875) 0px 1px 3px; background: white; padding-bottom: 50px; }
+#hello { margin: 10px auto 20px auto; padding-top: 20px; display: block; }
+#iparty section { margin: 0; padding: 10px 20px; clear: both; }
+#iparty section.divider-down { background: url(section_divider_down.png) no-repeat; }
+#iparty h3 { margin-left: 70px; }
+#iparty .narrow-text { margin: 0 70px; clear: right; }
+#iparty .dresscode img { float: right; margin: -22px 1px 10px 90px; opacity: 0.9; border-radius: 5px; }
 
 /* RSVP */
 #rsvp { background: #F2F2F2 url(body_bg20110224.png) repeat-x 0px 0px; }
