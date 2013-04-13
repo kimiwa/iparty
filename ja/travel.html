@@ -1,7 +1,7 @@
 ---
 layout: default
 body_id: travel
-title: - Travel
+title: '- Travel'
 body_class: lang_ja
 ---
 
@@ -56,7 +56,7 @@ body_class: lang_ja
       <p id="hotel-blurb">
         Kim と Miwa がオススメするホテルや予約サイトをいくつかご紹介します。一声かけてもらえれば宿探しのお手伝いもするので、お気軽にお知らせください！
       </p>
-      
+
       <h4>ホテル</h4>
       <dl>
         <dt class="hotelj"><a href="http://eng.hotelj.com/">Hotel J</a> ☆☆☆☆</dt>
@@ -183,7 +183,7 @@ body_class: lang_ja
     var centralen = {lat: 59.330958, lng: 18.056851};
     var viking = {lat: 59.315973, lng: 18.097115};
     var silja = {lat: 59.350376, lng: 18.106944};
-      
+
     travelMap = new GMaps({div: '#travel_map', lat: travel_center.lat, lng: travel_center.lng, zoom: 9});
     travelMap.addMarker({
       lat: arlanda.lat, lng: arlanda.lng, title: 'Arlanda', icon: '/assets/marker-airport.png', infoWindow: {content: 'Arlanda airport'}});
@@ -206,7 +206,7 @@ body_class: lang_ja
     var radmannen = {lat: 59.339273, lng: 18.0548};
     var bakfickan = {lat: 59.339127, lng: 18.054215};
     var rival = {lat: 59.318165, lng: 18.063631};
-      
+
     hotelMap = new GMaps({div: '#hotel_map', lat: hotel_center.lat, lng: hotel_center.lng, zoom: 12});
     hotelMap.addMarker({
       lat: hotelj.lat, lng: hotelj.lng, title: 'Hotel J', icon: '/assets/marker-villa.png', infoWindow: {content: 'Hotel J'}});

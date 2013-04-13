@@ -164,4 +164,14 @@ article { margin: 0; padding: 0; background: white; }
 #travel #booking-sites li.first { margin-left: 0; }
 #travel .map { width: 980px; height: 300px; margin: 0 20px 45px -20px; padding: 0; }
 
+/* Attendees */
+#attendees { background: #F2F2F2 url(square_pattern.jpg) repeat 0px 0px; }
+#attendees article { border-radius: 4px; -webkit-box-shadow: rgba(0, 0, 0, 0.296875) 0px 1px 3px; background: white; padding-bottom: 50px; }
+#thankyou { text-align: center; font-size: 3em; font-weight: bold; padding-top: 2em; }
 
+/* Pics */
+#pics { background: #F2F2F2 url(body_bg20110224.png) repeat-x 0px 0px; }
+#pics article { border-radius: 4px; -webkit-box-shadow: rgba(0, 0, 0, 0.296875) 0px 1px 3px; background: white; }
+#pics section { margin: 0; padding: 10px 20px; clear: both; }
+#pics section.staying { padding-top: 2em; }
+#pics section.divider-down { background: url(section_divider_down.png) no-repeat; }
